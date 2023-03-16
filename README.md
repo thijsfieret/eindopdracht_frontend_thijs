@@ -37,6 +37,7 @@ Om de applicatie te kunnen draaien heeft de gebruiker de volgende dingen nodig:
 - Stap 6: Typ onder in de terminal de volgende tekst: `npm install`
 - Stap 7: Wanneer webstorm klaar is met npm downloaden typ je het volgende commando: `npm start`
 - Stap 8: De browser opent nu als het goed is vanzelf de webpagina. Mocht dat niet het geval zijn klik dan [hier] (http://localhost:3000)
+- Stap 9: Ga naar [https://cors-anywhere.herokuapp.com/corsdemo](https://cors-anywhere.herokuapp.com/corsdemo) En druk op de knop "Request temporary access to the demo server"
 
 ## NPM commando's 
 
