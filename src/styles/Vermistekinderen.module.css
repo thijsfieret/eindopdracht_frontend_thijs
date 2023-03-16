@@ -1,0 +1,22 @@
+.Knoppen{
+    padding: 5px;
+}
+.vermistekinderendiv {
+    padding: 1rem 3rem;
+
+}
+.vermistekinderentitel {
+    padding: 1rem 3rem;
+    text-align: center;
+}
+.vermistekinderenondertitel {
+    padding: 1rem 3rem;
+    text-align: center;
+}
+svg {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(100%, -50%);
+    color: white;
+}
