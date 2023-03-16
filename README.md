@@ -1,1 +1,0 @@
-# eindopdracht_frontend_thijs
