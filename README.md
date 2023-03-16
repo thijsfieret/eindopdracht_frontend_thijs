@@ -17,8 +17,8 @@ De informatie over vermiste personen wordt op dit moment via verschillende kanal
 
 ## Foto hoofdpagina
 
+![Als de foto niet wil laden ga dan naar main/src/assets/fotohomepagina.png of druk hieronder](https://github.com/thijsfieret/eindopdracht_frontend_thijs/blob/main/src/assets/fotohomepagina.png)
 https://github.com/thijsfieret/eindopdracht_frontend_thijs/blob/main/src/assets/fotohomepagina.png
-
 
 ## Benodigheden om de applicatie te draaien
 
