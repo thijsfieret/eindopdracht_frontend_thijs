@@ -1,10 +1,23 @@
-# Getting Started with Create React App
+# Eindopdracht frontend Thijs Fieret
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Opleiding: Hbo ICT: Software Development
+Studentnummer: 800010923
 
-## Available Scripts
+## Inhoudsopgave
 
-In the project directory, you can run:
+- Wat kun je doen met de applicatie
+- Foto hoofdpagina
+- Benodigheden om de applicatie te draaien
+- Stappenplan installatie
+- npm commando's
+
+## Wat kun je doen met de applicatie
+
+De informatie over vermiste personen wordt op dit moment via verschillende kanalen aan burgers kenbaar gemaakt. B.v. via een Amber Alert of via Facebook. Probleem is dat er hierdoor geen volledig beeld ontstaat over welke personen vermist zijn. Een bericht kan makkelijk gemist worden en als iemand al wat langer vermist is, is het de vraag of men zich de berichten nog herinnert. Deze applicatie wil dat probleem oplossen door meer inzicht te geven welke volwassenen en welke kinderen er vermist zijn. Daarnaast wordt er relevante informatie gegeven die gerelateerd is aan vermissingen, zoals een lijst met de politiebureaus en zoekmogelijkheid op wijkagenten zijn in een bepaalde buurt. Omdat een vermissing ook gerelateerd kan zijn aan een opsporingsbericht, is het ook mogelijk opsporingsberichten te raadplegen.
+
+## Foto hoofdpagina
+
+src/assets/fotohomepagina.png
 
 ### `npm start`
 
