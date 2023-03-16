@@ -1,0 +1,22 @@
+* {
+    padding: 10px;
+    margin: 10px;
+}
+
+article {
+    position: relative;
+    padding: 10px;
+}
+
+article p {
+    position: absolute;
+    text-align: center;
+    width: 20rem;
+    color: white;
+    background-color: black;
+}
+
+img {
+    height: 18rem;
+    width: 20rem;
+}

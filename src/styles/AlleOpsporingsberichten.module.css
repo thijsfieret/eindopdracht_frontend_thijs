@@ -1,0 +1,32 @@
+
+.opsporingswrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 5rem;
+    transition: box-shadow 0.3s ease;
+
+}
+.opsporingstitel {
+    padding: 1rem 3rem;
+}
+
+/*:hover {*/
+/*     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);*/
+/* }*/
+p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: scale-down;
+    border-radius: 5px;
+    border-color: #111111;
+    border-style: solid;
+}

@@ -1,0 +1,12 @@
+
+.Titel{
+    font-size: 40px;
+}
+
+.hulptekst {
+    padding: 1rem 3rem;
+}
+.plaatjenederland:hover {
+    transform: scale(3) translate(35%, 35%);
+
+}

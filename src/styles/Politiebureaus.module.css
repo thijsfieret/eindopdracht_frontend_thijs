@@ -1,0 +1,38 @@
+.img-politiebureaus {
+    border-radius: 2rem;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.politiebureaustekst {
+    color: black;
+    width: 100%;
+    font-family: "Arial Narrow", serif;
+    font-size: 16px;
+}
+.politiebureaunaam {
+    color: darkblue;
+    width: 100%;
+    font-family: Arial;
+    font-size: 24px;
+}
+.politiebureauplaats {
+    color: darkblue;
+    width: 100%;
+    font-family: "Arial Narrow", serif ;
+    font-size: 16px;
+}
+.politiebureaudiv {
+    border-style: solid;
+    border-color: #111111;
+    padding: 1rem 3rem;
+
+}
+.politiebureauwrapper {
+    padding: 1rem 3rem;
+}
+.link {
+    color: blue;
+}
