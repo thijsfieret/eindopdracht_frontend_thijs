@@ -1,7 +1,7 @@
 import './App.css';
 import './App.css';
 import React, {useContext} from "react";
-import {AuthContext} from "./context/AuthContext";
+import { AuthContextProvider, useAuth } from "./context/AuthContext";
 import Home from "./pages/homePage/Home";
 import Politiebureaus from "./pages/Politiebureaus";
 import AlleOpsporingsberichten from "./pages/AlleOpsporingsberichten";
@@ -17,7 +17,7 @@ import VermisteKinderen from "./pages/Vermistekinderen";
 
 function App() {
 
-    const { isAuth } = useContext(AuthContext);
+    const { isAuthenticated } = useAuth();
 
   return (
       <BrowserRouter>
@@ -27,12 +27,12 @@ function App() {
               <Route path="/Politiebureaus"> <Politiebureaus/></Route>
               <Route path="/AlleOpsporingsberichten"> <AlleOpsporingsberichten/></Route>
               <Route path="/searched/:search"> <Searched/></Route>
-              <Route path="/login"> <Login/></Route>
               <Route path="/Vermistevolwassenen"> <VermisteVolwassenen/></Route>
               <Route path="/signup" ><Signup/> </Route>
               <Route path="/wijkagenten" ><Wijkagenten/> </Route>
               <Route path="/Vermistekinderen" ><VermisteKinderen/> </Route>
-              <Route path="/profile"> {isAuth ? <Profile /> : <Redirect to="/" />} </Route>
+              <AuthContextProvider><Route path="/login"> <Login/></Route></AuthContextProvider>
+              <AuthContextProvider> <Route path="/Profile"> {isAuthenticated  ? <Profile /> : <Redirect to="/" />} </Route> </AuthContextProvider>
           </Switch>
       </BrowserRouter>
   );

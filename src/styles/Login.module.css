@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #b7b7b7;
+    background-color: #dddefc;
     padding: 5rem;
 }
 
@@ -28,12 +28,31 @@
 }
 
 .button {
-    margin-left: 1rem;
-    border: solid gray;
+    margin: 1rem;
+    border-color: #464a86;
     background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0.2rem;
+    transition: box-shadow 0.3s ease;
 }
 
 .button:hover {
     border: solid green;
     color: green;
+}
+.logintekst {
+    color: black;
+    width: 100%;
+    font-family: "Arial Narrow", serif;
+    font-size: 24px;
+    text-align: center;
+}
+.loginlink {
+    color: blue;
+    text-underline: blue;
+    width: 100%;
+    font-family: "Arial Narrow", serif;
+    font-size: 24px;
+text-align: center;
 }
