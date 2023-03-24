@@ -4,7 +4,15 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import styles from "../styles/Politiebureaus.module.css"
 import Search from "../components/Search";
 
-
+function removeTags(str) {
+    if ((str === null) || (str === "")) {
+        return "";
+    }
+    else {
+        str = str.toString();
+        return str.replace(/<[^>]*>/g, "");
+    }
+}
 
 function Politiebureaus() {
     const [allPolitiebureaus, setAllPolitiebureaus] = useState([]);
@@ -23,7 +31,7 @@ function Politiebureaus() {
         <div>
             <Search/>
             <Wrapper className={styles.politiebureauwrapper}>
-                <h1>Alle Politiebureaus</h1>
+                <h1 className={styles.politiebureautitel}>Politiebureaus</h1>
                 {allPolitiebureaus.map(bericht => {
                     //const image=bericht.afbeeldingen && bericht.afbeeldingen.length > 0 ? bericht.afbeeldingen[0].url : geenfoto
                     return <Card key={bericht.naam}><div className={styles.politiebureaudiv}>
@@ -31,7 +39,7 @@ function Politiebureaus() {
                             <p><a href={bericht.url} className={styles.politiebureauplaats}>Plaats: {bericht.bezoekadres.plaats.toString()}</a></p>
                             <p className={styles.politiebureaustekst}>Adres: {bericht.bezoekadres.postadres.toString()}</p>
                             <p className={styles.politiebureaustekst}>Postcode: {bericht.bezoekadres.postcode.toString()}</p>
-                            <p className={styles.politiebureaustekst}>Openingstijden: {bericht.openingstijden}</p>
+                            <span className={styles.politiebureaustekst}>Openingstijden: {removeTags(bericht.openingstijden)}</span>
                             <p className={styles.politiebureaustekst}>Telefoonnummer: {bericht.telefoonnummer}</p>
                         </div>
                             <br></br>

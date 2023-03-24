@@ -11,13 +11,26 @@ svg {
 }
 .vermistevolwassenendiv {
     padding: 1rem 3rem;
-
 }
 .vermistevolwassenentitel {
     padding: 1rem 3rem;
     text-align: center;
+    font-size: 2.5rem;
+    color: rgb(30, 55, 153);
+    font-family: Arial, sans-serif;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
+
 .vermistevolwassenenondertitel {
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
     text-align: center;
+}
+.vermistevolwassenenimg {
+    width: 19rem;
+    height: 19rem;
+    object-fit: scale-down;
+    border-radius: 5px;
+    border-color: #111111;
+    border-style: solid;
 }

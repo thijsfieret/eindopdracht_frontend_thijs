@@ -28,7 +28,7 @@ function VermisteVolwassenen() {
                     {allVermistevolwassenen.map(bericht => {
                         const image=bericht.afbeeldingen && bericht.afbeeldingen.length > 0 ? bericht.afbeeldingen[0].url : geenfoto
                         return <a href={bericht.url} key={bericht.titel}>
-                            <div className={styles.Knoppen}><h4>{bericht.titel}</h4><img src={image} alt={geenfoto}/></div></a>
+                            <div className={styles.Knoppen}><h4>{bericht.titel}</h4><img src={image} className={styles.vermistevolwassenenimg} alt={geenfoto}/></div></a>
                     })}
                 </Wrapper>
             </div>

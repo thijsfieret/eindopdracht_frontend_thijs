@@ -1,12 +1,15 @@
-
-.Titel{
-    font-size: 40px;
-}
-
 .hulptekst {
     padding: 1rem 3rem;
 }
 .plaatjenederland:hover {
     transform: scale(3) translate(35%, 35%);
 
+}
+.wijkagententitel {
+    font-size: 2.5rem;
+    color: rgb(30, 55, 153);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }

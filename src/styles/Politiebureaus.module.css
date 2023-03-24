@@ -6,7 +6,7 @@
     height: 100%;
     object-fit: cover;
 }
-.politiebureaustekst {
+.politiebureautekst {
     color: black;
     width: 100%;
     font-family: "Arial Narrow", serif;
@@ -35,4 +35,12 @@
 }
 .link {
     color: blue;
+}
+.politiebureautitel {
+    font-size: 2.5rem;
+    color: rgb(30, 55, 153);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }

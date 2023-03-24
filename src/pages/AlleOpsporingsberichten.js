@@ -25,11 +25,17 @@ function AlleOpsporingsberichten() {
             <h1 className={styles.opsporingstitel}>Alle Opsporingsberichten</h1>
             <Wrapper className={styles.opsporingswrapper}>
                 {AlleOpsporingsberichten.map(bericht => {
-                    const image=bericht.afbeeldingen && bericht.afbeeldingen.length > 0 ? bericht.afbeeldingen[0].url : geenfoto
-                    return <a href={bericht.url} key={bericht.titel}>
-                   <div ><p>{bericht.titel}</p><img src={image}/></div>
-                        <br></br>
-                    </a>
+                    const image = bericht.afbeeldingen && bericht.afbeeldingen.length > 0 ? bericht.afbeeldingen[0].url : geenfoto;
+                    return (
+                        <div className={styles.opsporingsdiv} key={bericht.titel}>
+                            <a href={bericht.url}>
+                                <p className={styles.opsporingsnaam}>{bericht.titel}</p>
+                            </a>
+                            <p className={styles.opsporingsp}>{bericht.publicatiedatum}</p>
+                            <img src={image} className={styles.opsporingsimg} />
+                            <p className={styles.opsporingsp}>{bericht.introductie}</p>
+                        </div>
+                    );
                 })}
             </Wrapper>
         </div>

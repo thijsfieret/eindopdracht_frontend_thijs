@@ -33,7 +33,7 @@ function Wijkagenten() {
                 <Grid1>
                     <Component>
                 <section>
-                    <p className={styles.Titel}>Wijkagenten</p>
+                    <p className={styles.wijkagententitel}>Wijkagenten</p>
                 </section>
                 <section>
                     <p>

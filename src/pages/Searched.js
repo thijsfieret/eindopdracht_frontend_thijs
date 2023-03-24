@@ -6,6 +6,16 @@ import styles from "../styles/Searched.module.css";
 import axios from "axios";
 import geenfoto from "../assets/geenfoto.png";
 
+
+function removeTags(str) {
+    if ((str === null) || (str === "")) {
+        return "";
+    }
+    else {
+        str = str.toString();
+        return str.replace(/<[^>]*>/g, "");
+    }
+}
 function Searched() {
     const [searchedZoekopdracht, setSearchedZoekopdracht] = useState([]);
     const [error, toggleError] = useState(false);
@@ -38,9 +48,9 @@ function Searched() {
             <h1 className={styles.searchedtitel}>Zoekopdracht {params.search}</h1>
             <Wrapper>
                 {loading ? (
-                    <p className={styles.politiebureaudiv}>Een moment geduld a.u.b.. De API is bezig met je zoekopdracht.</p>
+                    <p className={styles.searcheddiv}>Een moment geduld a.u.b.. De API is bezig met je zoekopdracht.</p>
                 ) : error ? (
-                    <p className={styles.politiebureaudiv}>Oh oh. Hier ging iets mis. Probeer het opnieuw!</p>
+                    <p className={styles.searcheddiv}>Oh oh. Hier ging iets mis. Probeer het opnieuw!</p>
                 ) : searchedZoekopdracht && searchedZoekopdracht.length > 0 ? (
                     searchedZoekopdracht.map((bericht) => {
                         const image =
@@ -50,24 +60,24 @@ function Searched() {
                         return (
 
                             <Card key={bericht.uid}>
-                                <div className={styles.politiebureaudiv}>
+                                <div className={styles.searcheddiv}>
                                     <p>
                                         <a
                                             href={bericht.url}
-                                            className={styles.politiebureaunaam}
+                                            className={styles.searchednaam}
                                             target="_blank"
                                             rel="noreferrer"
                                         >
                                             {bericht.titel}
                                         </a>
                                     </p>
-                                    <img src={image} alt="geenfoto" />
-                                    <p className={styles.politiebureaustekst}>
+                                    <img src={image} alt="geenfoto" className={styles.searchedimg}/>
+                                    <p className={styles.searchedtekst}>
                                         Case: {bericht.introductie || ""}
                                     </p>
                                     {bericht.dossier?.zaakcontent?.map((content, i) => (
-                                        <p className={styles.politiebureaustekst} key={i}>
-                                            Zaakcontent {i + 1}: {content.titel} <p className={styles.politiebureaustekst}> {content.opgemaaktetekst}</p>
+                                        <p className={styles.searchedtekst} key={i}>
+                                            <span className={styles.searchedtekst}>{removeTags(content.opgemaaktetekst)}</span>
                                         </p>
                                     ))}
                                 </div>
@@ -75,7 +85,7 @@ function Searched() {
                         );
                     })
                 ) : (
-                    <p className={styles.politiebureaudiv}>Geen berichten gevonden. Probeer anders een veelvoorkomende zoekterm zoals "Hond", "Buiten" of "Avond"</p>
+                    <p className={styles.searcheddiv}>Geen berichten gevonden. Probeer anders een veelvoorkomende zoekterm zoals "Hond", "Buiten" of "Avond"</p>
                 )}
             </Wrapper>
         </div>
