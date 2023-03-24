@@ -3,17 +3,21 @@ import { AuthContext } from '../context/AuthContext';
 import { useHistory } from 'react-router-dom';
 
 function Profile() {
-    const { isAuthenticated } = useContext(AuthContext);
-    const [user, setUser] = useState(null);
+    const { isAuthenticated, userDetails } = useContext(AuthContext);
     const [loading, setLoading] = useState(true);
     const history = useHistory();
     const API_BASE_URL = 'https://frontend-educational-backend.herokuapp.com';
-
+    const [user, setUser] = useState({ name: '', email: '' });
     useEffect(() => {
         async function fetchData() {
+            console.log('Raakt de fetchdata bovenin');
             try {
-                const response = await fetch('/api/user', {
-                    headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
+                console.log('Raakt de fetchdata 1 onder');
+                const response = await fetch(`${API_BASE_URL}/api/user`, {
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${localStorage.getItem('accessToken')}`
+                    }
                 });
                 console.log('Response status:', response.status);
                 if (!response.ok) {
@@ -31,39 +35,34 @@ function Profile() {
         }
 
         if (isAuthenticated) {
-            fetchData();
+            if (userDetails) {
+                setUser(userDetails);
+                setLoading(false);
+            } else {
+                fetchData();
+            }
+            console.log('Raakt de isauthenticated');
         } else {
             history.push('/login');
+            console.log('Raakt de else, login');
         }
-    }, [isAuthenticated, history]);
+    }, [isAuthenticated, history, userDetails]);
 
     if (loading) {
+        console.log('Raakt de loading');
         return <div>Loading...</div>;
     }
 
     if (!user) {
+        console.log('Raakt de unable to fetch user data');
         return <div>Unable to fetch user data</div>;
     }
-
+    console.log('WERKT');
     return (
+
         <>
             <header></header>
             <main>
-                <h3>Welcome to your personal profile page</h3>
-                <section>
-                    <h6>Your personal data</h6>
-                    <p>Username: {user.username}</p>
-                    <p>Email: {user.email}</p>
-                </section>
-                <section>
-                    <h6>Personal profile content</h6>
-                    <p>Your personal and private information</p>
-                </section>
-                <section>
-                    <h6>Account details</h6>
-                    <p>Account created on: {new Date(user.createdAt).toLocaleDateString()}</p>
-                    <p>Last login: {new Date(user.lastLogin).toLocaleString()}</p>
-                </section>
             </main>
         </>
     );

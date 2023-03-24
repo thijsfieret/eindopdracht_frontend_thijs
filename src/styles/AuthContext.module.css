@@ -1,0 +1,63 @@
+* {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.error {
+    color: red;
+    font-size: 1rem;
+}
+
+.good {
+    color: green;
+    font-size: 1rem;
+    justify-content: center;
+}
+
+
+.layout {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #dddefc;
+    padding: 5rem;
+
+}
+
+.label {
+    display: block;
+}
+
+.loginbutton {
+    margin: 1rem;
+    border-color: #464a86;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0.2rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.loginbutton:hover {
+    border: solid green;
+    color: green;
+}
+.logoutbutton {
+    margin: 1rem;
+    border-color: #464a86;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0.2rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.logoutbutton:hover {
+    border: solid red;
+    color: red;
+}
+
+.button:hover {
+    border: solid green;
+    color: green;
+}
