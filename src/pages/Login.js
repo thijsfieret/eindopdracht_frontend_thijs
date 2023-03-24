@@ -20,7 +20,6 @@ function Login() {
             setError("Failed to log in");
         }
     }
-
     return (
         <div className={styles.container}>
             <form className={styles.form} onSubmit={handleSubmit}>

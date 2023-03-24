@@ -4,8 +4,8 @@ img:hover {
 }
 .opsporingswrapper {
     display: flex;
-    flex-wrap: wrap; /* Allows the elements to wrap onto new lines */
-    justify-content: center; /* Horizontally center the child elements */
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: #fff;
     transition: box-shadow 0.3s ease;
 }

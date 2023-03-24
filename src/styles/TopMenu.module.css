@@ -5,11 +5,9 @@
     overflow: hidden;
     background-color: #464a86;
 }
-
 .links {
     float: left;
 }
-
 .links a {
     display: block;
     color: white;
@@ -17,7 +15,6 @@
     padding: 14px 16px;
     text-decoration: none;
 }
-
 .links a:hover {
     background-color: #00114d;
     color: white;

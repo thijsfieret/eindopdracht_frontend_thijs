@@ -157,7 +157,6 @@ const Card = styled.div`
     max-width: 280px;
     height: 368px;
     margin-top: 1rem;
-    //object-fit: cover; DIT MAAKT DE PLAATJES GROTER
   }
 `;
 export default Wijkagenten;

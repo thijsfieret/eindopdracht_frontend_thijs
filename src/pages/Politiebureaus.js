@@ -33,7 +33,6 @@ function Politiebureaus() {
             <Wrapper className={styles.politiebureauwrapper}>
                 <h1 className={styles.politiebureautitel}>Politiebureaus</h1>
                 {allPolitiebureaus.map(bericht => {
-                    //const image=bericht.afbeeldingen && bericht.afbeeldingen.length > 0 ? bericht.afbeeldingen[0].url : geenfoto
                     return <Card key={bericht.naam}><div className={styles.politiebureaudiv}>
                             <p><a href={bericht.url} className={styles.politiebureaunaam}>{bericht.naam}</a></p>
                             <p><a href={bericht.url} className={styles.politiebureauplaats}>Plaats: {bericht.bezoekadres.plaats.toString()}</a></p>
