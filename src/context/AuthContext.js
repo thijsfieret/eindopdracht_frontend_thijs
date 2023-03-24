@@ -52,7 +52,6 @@ export function AuthContextProvider({ children }) {
 
     const login = async (username, password) => {
         try {
-            console.log('Raakt de login');
             const response = await fetch(`${API_BASE_URL}/api/auth/signin`, {
                 method: 'POST',
                 headers: {
@@ -72,7 +71,6 @@ export function AuthContextProvider({ children }) {
             setUser(user);
             setIsAuthenticated(true);
             setIsLoginSubmitted(true);
-            console.log('Raakt de authentication' + isAuthenticated);
             history.push('/Profile');
             contextData.isAuthenticated = true;
 
@@ -93,14 +91,12 @@ export function AuthContextProvider({ children }) {
             throw error;
         }
     };
-
     const logout = () => {
         localStorage.removeItem('accessToken');
         setUser(null);
         setIsAuthenticated(false);
         history.push('/');
     };
-
     const contextData = {
         user,
         isAuthenticated,
@@ -113,10 +109,6 @@ export function AuthContextProvider({ children }) {
             email: user.email,
         },
     };
-
-    console.log('Raakt authcontext onderin ' + contextData.user?.username);
-    console.log('Raakt authcontext onderin ' + contextData.user?.email);
-
     return (
         <div className={styles["layout"]}>
             {isAuthenticated ? (

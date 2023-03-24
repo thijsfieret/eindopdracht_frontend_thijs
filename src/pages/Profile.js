@@ -41,23 +41,16 @@ function Profile() {
             } else {
                 fetchData();
             }
-            console.log('Raakt de isauthenticated');
         } else {
             history.push('/login');
-            console.log('Raakt de else, login');
         }
     }, [isAuthenticated, history, userDetails]);
-
     if (loading) {
-        console.log('Raakt de loading');
         return <div>Loading...</div>;
     }
-
     if (!user) {
-        console.log('Raakt de unable to fetch user data');
-        return <div>Unable to fetch user data</div>;
+        return <div>Kan geen user data vinden</div>;
     }
-    console.log('WERKT');
     return (
 
         <>
